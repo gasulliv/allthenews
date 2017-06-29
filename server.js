@@ -28,7 +28,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/allthenewsdb");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/allthenewsdb");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -56,7 +56,6 @@ app.get("/", function(req, res) {
     else {
     var articleScrape = doc;
     res.render("index", {articleScrape});
-   res.render("index");
       }
  });
 

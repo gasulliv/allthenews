@@ -4,7 +4,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Home</a></p>
-    <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Saved Articles</a></p>
+    <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Saved Notes</a></p>
     <button type="button" id ="scrape" class="btn btn-danger navbar-btn">Scrape New Articles!</button>
     <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
   </div>
@@ -18,13 +18,27 @@
 	</div>
 </div>
 <div class = "container-fluid">
+<br><br>
 <div class = "row">
 	<div class = "col-md-12">
 	<div id = "appender">
 		<div id = "articles">
 			{{#each articleScrape}}
-				<h3 data-id= "{{this._id}}"><span>{{this.title}}</span></h3>
-          <a href="{{this.link}}" target="_blank">{{this.link}}</a>
+
+			<div class="panel panel-info">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">{{this.title}}</h3>
+  				</div>
+ 					 <div class="panel-body">
+   						<a href="{{this.link}}" target="_blank">{{this.link}}</a>
+  					</div>
+			</div>
+				<span></span></h3>
+          <div class="input-group input-group-lg">
+          	<span class="input-group-addon"></span>
+ 				 <input type="text" class="form-control" placeholder="new note" aria-describedby="sizing-addon1">
+ 			</div><br>
+ 				 <button type="new" id ="savenote" class="btn btn-info navbar-btn">Save Note</button><br><br>
           {{/each}}
         </div>
 		</div>

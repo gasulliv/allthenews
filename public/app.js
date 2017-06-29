@@ -1,12 +1,15 @@
+$(document).ready(function(){
+
 function refresh() {
     setTimeout(function() {
         window.location.href = "/";
     }, 2500);
 }
 
-$("#scraper").on("click", function() {
-    $("#scraper").text("Scraping...");
+$("#scrape").on("click", function() {
+    $("#scrape").text("Scraping...");
     $.get("/scrape").done(refresh);
+
 });
 
 
@@ -72,4 +75,7 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+});
+
+
 });
