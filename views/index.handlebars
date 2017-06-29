@@ -5,7 +5,7 @@
   <div class="container">
     <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Home</a></p>
     <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Saved Articles</a></p>
-    <button type="button" id ="scrape" class="btn btn-danger navbar-btn"><a href = "/articles">Scrape New Articles!</a></button>
+    <button type="button" id ="scrape" class="btn btn-danger navbar-btn">Scrape New Articles!</button>
     <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
   </div>
 </nav>
@@ -21,7 +21,13 @@
 <div class = "row">
 	<div class = "col-md-12">
 	<div id = "appender">
-		<div id = "articles"></div>
+		<div id = "articles">
+			{{#each articleScrape}}
+				<h3 data-id= "{{this._id}}"><span>{{this.title}}</span></h3>
+          <a href="{{this.link}}" target="_blank">{{this.link}}</a>
+          {{/each}}
+        </div>
+		</div>
 	</div>
 	<!---->
 

@@ -46,6 +46,22 @@ db.once("open", function() {
 // Routes
 // ======
 
+app.get("/", function(req, res) {
+  Article.find(function(error, doc) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    // Or send the doc to the browser as a json object
+    else {
+    var articleScrape = doc;
+    res.render("index", {articleScrape});
+   res.render("index");
+      }
+ });
+
+});
+
 // A GET request to scrape the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
