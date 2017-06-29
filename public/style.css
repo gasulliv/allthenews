@@ -1,0 +1,49 @@
+body {
+	background-color:  #2a2a2a;
+	overflow-x: hidden;
+	font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+	font-size: 80px;
+	font-family: 'Audiowide', cursive;
+}
+
+h2 {
+	color:white;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.big-picture {
+	background-image: url("cover2.png");
+	overflow-x:hidden;
+	width: 100%;
+	height:586px;
+	box-shadow: 30px 10px 5px #151515;
+}
+
+.center-text {
+	color:white;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 260px;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.appender {
+	background-color: yellow;
+	text-align: center;
+	padding: 15px;
+	margin-top: 50px;
+	opacity:1.0;
+	border: 2px yellow solid;
+	border-radius: 10px;
+	font-size: 25px;
+
+}
+
+.fa-github-alt {
+	margin-left:680px;
+
+}
